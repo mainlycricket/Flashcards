@@ -1,0 +1,80 @@
+body {
+    background-image: url("world.png");
+    font-family: 'Lato', sans-serif;
+    background-position: center;
+    background-size: cover;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px auto;
+    background-color: aliceblue;
+    padding: 10px 0 10px 0;
+    width: 600px;
+    border-radius: 20px;
+    border: 2px solid black;
+}
+
+.flex-container {
+    display: flex;
+    height: 600px;
+    width: 500px;
+    flex-wrap: wrap;
+    margin: 10px auto;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card-holder {
+    height: 125px;
+    width: 125px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px;
+    perspective: 1000px;
+}
+
+.card {
+    border-radius: 20px;
+    height: 125px;
+    width: 125px;
+    position: relative;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+    border: 2px solid black;
+}
+
+p {
+    margin-top: 40px;
+}
+
+.front {
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    background: linear-gradient(#08aeea, #2af598);
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    text-align: center;
+}
+
+.card-holder:hover .card {
+    transform: rotateY(180deg);
+}
+
+.back {
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    background: linear-gradient(#f8da61, #ff5acd);
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+    text-align: center;
+}
